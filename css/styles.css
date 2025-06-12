@@ -124,19 +124,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 4rem 1rem;      /* vertical space above/below text */
-  min-height: 70vh;        /* change to 100vh if you want full screen */
+  padding: 4rem 1rem;    
+  min-height: 70vh;       
   background: var(--white);
-  text-align: center;      /* center the lines */
+  text-align: center;    
 }
 
-/* Container width control */
 .container {
   max-width: 800px;
   margin: 0 auto;
-}
-
-/* Ensure your buttons load too */
-.btn-primary, .btn-outline {
-  /* these come from earlier CSS—just making sure they’re here */
 }
