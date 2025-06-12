@@ -2,36 +2,35 @@
 <html lang="az">
 <head>
   <meta charset="utf-8">
-  <title>Giriş / Qeydiyyat — IT Yay Düşərgəsi</title>
+  <title>Giriş — IT Yay Düşərgəsi</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=4">
 </head>
 <body>
   <header class="site-header">
     <div class="container">
-      <h1 class="logo">Giriş / Qeydiyyat</h1>
+      <h1 class="logo">Giriş et</h1>
       <a href="index.html" class="btn btn-outline">Əsas səhifə</a>
     </div>
   </header>
 
   <main class="form-page">
     <div class="container form-container">
-      <form id="auth-form">
-        <label for="email">E-mail</label>
-        <input id="email" type="email" placeholder="email@orneK.com" required>
+      <form id="login-form">
+        <label for="login-email">E-mail</label>
+        <input id="login-email" type="email" placeholder="testuser@example.com" required>
 
-        <label for="password">Şifrə</label>
-        <input id="password" type="password" placeholder="••••••••" required>
+        <label for="login-password">Şifrə</label>
+        <input id="login-password" type="password" placeholder="TestPass123!" required>
 
         <div class="form-actions">
-          <button id="signup" type="button" class="btn btn-outline">Qeydiyyatdan keç</button>
-          <button id="login"  type="button" class="btn btn-primary">Giriş et</button>
+          <button id="login-btn" type="button" class="btn btn-primary">Giriş et</button>
         </div>
       </form>
-      <div id="message" class="message"></div>
+      <div id="login-message" class="message"></div>
     </div>
   </main>
 
-  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/app.js?v=4"></script>
 </body>
 </html>
