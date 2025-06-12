@@ -169,7 +169,6 @@ body {
   margin-bottom: 2rem;
   line-height: 1.4;
 }
-/* center & enlarge hero text */
 .hero {
   display: flex;
   flex-direction: column;
@@ -197,7 +196,6 @@ body {
   line-height: 1.4;
 }
 
-/* header nav links */
 .site-nav {
   display: flex;
   gap: 1rem;
@@ -211,15 +209,12 @@ body {
   text-decoration: underline;
 }
 
-/* ─── Form-actions now has two buttons side by side ──────────── */
 .form-actions {
   margin-top: 1.5rem;
   display: flex;
-  gap: 1rem;                /* space between Giriş et & Geri */
-  justify-content: flex-end;/* keep them right-aligned—you can center if you prefer */
+  gap: 1rem;               
+  justify-content: flex-end;
 }
-
-/* ─── Footer remains the same to appear on every page ───────── */
 .site-footer {
   background: var(--color-bg);
   text-align: center;
@@ -231,7 +226,7 @@ body {
 
 .site-header .logo {
   color: var(--color-dark);
-  text-decoration: none;  /* just in case */
+  text-decoration: none;  
   font-size: 1.4rem;
   font-weight: bold;
 }
