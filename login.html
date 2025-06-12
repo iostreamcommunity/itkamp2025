@@ -4,33 +4,39 @@
   <meta charset="utf-8">
   <title>Giriş — IT Yay Düşərgəsi</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="css/styles.css?v=4">
+  <link rel="stylesheet" href="css/styles.css?v=6">
 </head>
 <body>
+  <!-- HEADER: always same site title -->
   <header class="site-header">
     <div class="container">
-      <h1 class="logo">Giriş et</h1>
-      <a href="index.html" class="btn btn-outline">Əsas səhifə</a>
+      <h1 class="logo">
+        <a href="index.html">IT Yay Düşərgəsi 2025</a>
+      </h1>
     </div>
   </header>
 
+  <!-- LOGIN FORM -->
   <main class="form-page">
     <div class="container form-container">
       <form id="login-form">
-        <label for="login-email">E-mail</label>
-        <input id="login-email" type="email" placeholder="testuser@example.com" required>
+        <label for="login-username">İstifadəçi adı</label>
+        <input id="login-username" type="text" placeholder="campuser" required>
 
         <label for="login-password">Şifrə</label>
-        <input id="login-password" type="password" placeholder="TestPass123!" required>
+        <input id="login-password" type="password" placeholder="camp1234" required>
 
         <div class="form-actions">
           <button id="login-btn" type="button" class="btn btn-primary">Giriş et</button>
         </div>
       </form>
       <div id="login-message" class="message"></div>
+
+      <!-- BACK BUTTON -->
+      <a href="index.html" class="btn btn-outline back-btn">Geri</a>
     </div>
   </main>
 
-  <script type="module" src="js/app.js?v=4"></script>
+  <script src="js/auth.js?v=1"></script>
 </body>
 </html>
