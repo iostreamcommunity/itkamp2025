@@ -211,17 +211,6 @@ body {
   text-decoration: underline;
 }
 
-/* ─── Neutralize the logo link styling ───────────────────────── */
-.logo-link {
-  color: inherit;           /* same color as plain text */
-  text-decoration: none;    /* remove underline */
-  font-size: 1.4rem;        /* match your existing .logo */
-  font-weight: bold;
-}
-.logo-link:hover {
-  text-decoration: none;    /* no hover underline either */
-}
-
 /* ─── Form-actions now has two buttons side by side ──────────── */
 .form-actions {
   margin-top: 1.5rem;
@@ -238,4 +227,11 @@ body {
   padding: 0.5rem 0;
   font-size: 0.85rem;
   flex-shrink: 0;
+}
+
+.site-header .logo {
+  color: var(--color-dark);
+  text-decoration: none;  /* just in case */
+  font-size: 1.4rem;
+  font-weight: bold;
 }
