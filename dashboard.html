@@ -1,18 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="az">
 <head>
-  <meta charset="UTF-8">
-  <title>Dusherge Dashboard</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js"></script>
-  <script defer src="js/app.js"></script>
+  <meta charset="utf-8">
+  <title>Dashboard — IT Yay Düşərgəsi</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/styles.css?v=5">
 </head>
 <body>
-  <button id="logout">Log Out</button>
-  <h2>Dusherge Materials</h2>
-  <ul>
-    <li><a href="module1.html">Module 1: Intro to CS</a></li>
-  </ul>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Qapı arxası</h1>
+      <button id="logout-btn" class="btn btn-outline">Çıxış</button>
+    </div>
+  </header>
+  <main class="content">
+    <div class="container">
+      <h2>Salam, siz xoş gəldiniz!</h2>
+      <p>Burada yalnız qeydiyyatdan keçmiş istifadəçilərin görə biləcəyi materiallar olacaq.</p>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">© 2025 IT Yay Düşərgəsi</div>
+  </footer>
+  <script src="js/auth.js?v=1"></script>
 </body>
 </html>
