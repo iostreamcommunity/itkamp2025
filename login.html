@@ -1,21 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Dusherge Login</title>
+  <meta charset="utf-8">
+  <title>Giriş / Qeydiyyat — IT Yay Düşərgəsi</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/styles.css">
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js"></script>
-  <script defer src="js/app.js"></script>
 </head>
 <body>
-  <h2>Sign Up / Log In</h2>
-  <div id="auth-forms">
-    <input id="email" type="email" placeholder="Email">
-    <input id="password" type="password" placeholder="Password">
-    <button id="signup">Sign Up</button>
-    <button id="login">Log In</button>
-  </div>
-  <div id="message"></div>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Giriş / Qeydiyyat</h1>
+      <nav>
+        <a class="btn" href="index.html">Əsas səhifə</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="form-page">
+    <div class="container form-container">
+      <form id="auth-form">
+        <label for="email">E-mail</label>
+        <input id="email" type="email" placeholder="email@orneK.com" required>
+
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="••••••••" required>
+
+        <div class="form-actions">
+          <button id="signup" type="button" class="btn">Qeydiyyatdan keç</button>
+          <button id="login"  type="button" class="btn btn-primary">Giriş et</button>
+        </div>
+      </form>
+      <div id="message" class="message"></div>
+    </div>
+  </main>
+  <script type="module" src="js/app.js"></script>
 </body>
 </html>
