@@ -211,3 +211,31 @@ body {
   text-decoration: underline;
 }
 
+/* ─── Neutralize the logo link styling ───────────────────────── */
+.logo-link {
+  color: inherit;           /* same color as plain text */
+  text-decoration: none;    /* remove underline */
+  font-size: 1.4rem;        /* match your existing .logo */
+  font-weight: bold;
+}
+.logo-link:hover {
+  text-decoration: none;    /* no hover underline either */
+}
+
+/* ─── Form-actions now has two buttons side by side ──────────── */
+.form-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;                /* space between Giriş et & Geri */
+  justify-content: flex-end;/* keep them right-aligned—you can center if you prefer */
+}
+
+/* ─── Footer remains the same to appear on every page ───────── */
+.site-footer {
+  background: var(--color-bg);
+  text-align: center;
+  border-top: 1px solid #dfe4ea;
+  padding: 0.5rem 0;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
