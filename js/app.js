@@ -1,42 +1,61 @@
 // js/app.js
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
 import {
-  getAuth, createUserWithEmailAndPassword,
-  signInWithEmailAndPassword, onAuthStateChanged,
+  getAuth,
+  signInWithEmailAndPassword,
+  onAuthStateChanged,
   signOut
 } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
 
+// ── Your real Firebase config ───────────────────────────────
 const firebaseConfig = {
-  apiKey: "AIzaSyBVEdKPlRuPuUllZbpo92UI54xifYily9s",
-  authDomain: "dusherge-auth.firebaseapp.com",
-  projectId: "dusherge-auth",
-  storageBucket: "dusherge-auth.firebasestorage.app",
-  messagingSenderId: "146901857317",
-  appId: "1:146901857317:web:c85e2c7bfd5d4c0497bbcc",
-  measurementId: "G-CBXZLPL9HV"
+  apiKey:    "AIzaSy…",
+  authDomain:"camp-auth.firebaseapp.com",
+  projectId: "camp-auth",
+  // …
 };
+initializeApp(firebaseConfig);
+const auth = getAuth();
 
-const app  = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+// ── ALLOW-LIST ────────────────────────────────────────────────
+// Only users in this list may proceed to dashboard.html
+const ALLOWED_USERS = ["testuser@example.com"];
 
-const email    = document.getElementById('email');
-const password = document.getElementById('password');
-const msgBox   = document.getElementById('message');
+// ── LOGIN FLOW ───────────────────────────────────────────────
+const loginForm = document.getElementById("login-form");
+if (loginForm) {
+  const emailIn  = document.getElementById("login-email");
+  const pwdIn    = document.getElementById("login-password");
+  const msgBox   = document.getElementById("login-message");
 
-document.getElementById('signup').onclick = () =>
-  createUserWithEmailAndPassword(auth, email.value, password.value)
-    .then(() => { msgBox.textContent = 'Signed up! Redirecting…'; })
-    .catch(e => msgBox.textContent = e.message);
+  document.getElementById("login-btn").onclick = () => {
+    const email = emailIn.value.trim();
+    const pwd   = pwdIn.value;
+    signInWithEmailAndPassword(auth, email, pwd)
+      .then(({ user }) => {
+        if (!ALLOWED_USERS.includes(user.email)) {
+          // not allowed → sign out immediately
+          signOut(auth);
+          msgBox.textContent = "Bu hesab icazəli deyil.";
+        } else {
+          // allowed → go to dashboard
+          window.location = "dashboard.html";
+        }
+      })
+      .catch(e => msgBox.textContent = e.message);
+  };
+}
 
-document.getElementById('login').onclick = () =>
-  signInWithEmailAndPassword(auth, email.value, password.value)
-    .then(() => { window.location = 'dashboard.html'; })
-    .catch(e => msgBox.textContent = e.message);
-
-if (window.location.pathname.endsWith('dashboard.html')) {
+// ── PROTECT DASHBOARD & LOGOUT ───────────────────────────────
+if (window.location.pathname.endsWith("dashboard.html")) {
   onAuthStateChanged(auth, user => {
-    if (!user) window.location = 'login.html';
+    if (!user || !ALLOWED_USERS.includes(user.email)) {
+      // not logged in or not on allow-list
+      signOut(auth);
+      window.location = "login.html";
+    }
   });
-  document.getElementById('logout').onclick = () =>
-    signOut(auth).then(() => window.location = 'index.html');
+  const logoutBtn = document.getElementById("logout");
+  if (logoutBtn) logoutBtn.onclick = () =>
+    signOut(auth).then(() => window.location = "index.html");
 }
