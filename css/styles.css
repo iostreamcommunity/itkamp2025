@@ -1,5 +1,6 @@
+/* ─── Variables ───────────────────────────────────────────────────────────── */
 :root {
-  --font-sans:  "Segoe UI", Roboto, sans-serif;
+  --font-sans:   "Segoe UI", Roboto, sans-serif;
   --color-bg:    #f4f7f9;
   --color-white: #ffffff;
   --color-dark:  #2c3e50;
@@ -9,19 +10,33 @@
   --shadow:      0 4px 12px rgba(0,0,0,0.1);
 }
 
-* { box-sizing: border-box; margin:0; padding:0; }
+/* ─── Reset & Global ──────────────────────────────────────────────────────── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
   font-family: var(--font-sans);
-  background: var(--color-bg);
+  background: var(--color-white);
   color: var(--color-dark);
   line-height: 1.6;
 }
+
 .container {
   width: 90%;
-  max-width: 540px;
+  max-width: 640px;
   margin: 0 auto;
 }
 
+/* ─── Buttons ─────────────────────────────────────────────────────────────── */
 .btn {
   display: inline-block;
   padding: 0.6em 1.2em;
@@ -32,6 +47,7 @@ body {
   cursor: pointer;
   transition: background 0.3s, color 0.3s, border-color 0.3s;
 }
+
 .btn-primary {
   background: var(--color-accent);
   color: var(--color-white);
@@ -40,6 +56,7 @@ body {
 .btn-primary:hover {
   background: #2980b9;
 }
+
 .btn-outline {
   background: transparent;
   color: var(--color-dark);
@@ -50,6 +67,7 @@ body {
   color: var(--color-white);
 }
 
+/* ─── Header & Footer ─────────────────────────────────────────────────────── */
 .site-header {
   background: var(--color-white);
   box-shadow: var(--shadow);
@@ -63,18 +81,23 @@ body {
 .logo {
   font-size: 1.4rem;
 }
+
+/* Footer tweaks */
 .site-footer {
   background: var(--color-bg);
   text-align: center;
+  border-top: 1px solid #dfe4ea;
   padding: 0.5rem 0;
   font-size: 0.85rem;
-  border-top: 1px solid #dfe4ea;
+  flex-shrink: 0;
 }
 
+/* ─── Hero Section ───────────────────────────────────────────────────────── */
 .hero {
   background: var(--color-white);
   padding: 4rem 0;
   text-align: center;
+  flex: 1 0 auto;
 }
 .hero-content {
   max-width: 600px;
@@ -89,6 +112,7 @@ body {
   margin-bottom: 2rem;
 }
 
+/* ─── Form Page ───────────────────────────────────────────────────────────── */
 .form-page {
   padding: 3rem 0;
 }
