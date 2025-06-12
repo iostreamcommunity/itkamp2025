@@ -169,3 +169,45 @@ body {
   margin-bottom: 2rem;
   line-height: 1.4;
 }
+/* center & enlarge hero text */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 auto;
+  padding: 4rem 1rem;
+  text-align: center;
+  background: var(--color-white);
+}
+
+.hero-content {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.hero h2 {
+  font-size: clamp(2rem, 6vw, 2.5rem);
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: clamp(1.125rem, 3.5vw, 1.5rem);
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+
+/* header nav links */
+.site-nav {
+  display: flex;
+  gap: 1rem;
+}
+.nav-link {
+  color: var(--color-dark);
+  text-decoration: none;
+  font-weight: 500;
+}
+.nav-link:hover {
+  text-decoration: underline;
+}
+
