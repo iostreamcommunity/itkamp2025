@@ -152,11 +152,10 @@ body {
 }
 
 .site-footer {
-  border-top: 1px solid #e5e5e5;
+  background: var(--color-bg);
   text-align: center;
-  padding: 0;             
-}
-.site-footer .container {
-  padding: 0.5rem 0;     
+  border-top: 1px solid #dfe4ea;
+  padding: 0.5rem 0;
   font-size: 0.85rem;
+  margin-top: auto;
 }
