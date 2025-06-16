@@ -1,43 +1,19 @@
 // js/auth.js
-// simple in-memory allow-list
-const ALLOWED = {
-  "campuser": "camp1234",    // username: password
-  // add more here as needed:
-  // "alice": "alicePass",
-  // "bob":   "bobPass"
-};
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('login-form');
+  const msg  = document.getElementById('login-message');
 
-// redirect to login if not authenticated
-function requireAuth() {
-  if (!sessionStorage.getItem("loggedInUser")) {
-    window.location = "login.html";
-  }
-}
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const user = form.username.value.trim();
+    const pass = form.password.value.trim();
 
-// handle login form
-const loginForm = document.getElementById("login-form");
-if (loginForm) {
-  const u = document.getElementById("login-username");
-  const p = document.getElementById("login-password");
-  const msg = document.getElementById("login-message");
-  document.getElementById("login-btn").onclick = () => {
-    const user = u.value.trim();
-    const pass = p.value;
-    if (ALLOWED[user] && ALLOWED[user] === pass) {
-      sessionStorage.setItem("loggedInUser", user);
-      window.location = "dashboard.html";
+    // replace these with your real credentials
+    if (user === 'campuser' && pass === 'camp1234') {
+      window.location.href = 'dashboard.html';
     } else {
-      msg.textContent = "Yanlış istifadəçi adı və ya şifrə.";
+      msg.textContent = '❌ İstifadəçi adı və ya şifrə yanlışdır.';
+      msg.style.color = '#e74c3c';
     }
-  };
-}
-
-// handle logout on dashboard
-const logoutBtn = document.getElementById("logout-btn");
-if (logoutBtn) {
-  requireAuth(); // protect page
-  logoutBtn.onclick = () => {
-    sessionStorage.removeItem("loggedInUser");
-    window.location = "index.html";
-  };
-}
+  });
+});
