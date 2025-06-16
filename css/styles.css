@@ -156,6 +156,11 @@ body {
 .site-footer {
   border-top: 1px solid #e5e5e5;
   text-align: center;
-  padding: 0.25rem 0;
+  /* Remove direct padding to rely on container */
+  padding: 0;
+}
+.site-footer .container {
+  /* Shrink footer height */
+  padding-block: 0.25rem;
   font-size: 0.9rem;
 }
