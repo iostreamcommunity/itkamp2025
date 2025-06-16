@@ -151,13 +151,12 @@ body {
   padding: calc(var(--spacing) * 2) 0;
 }
 
-/* Footer */
 .site-footer {
   border-top: 1px solid #e5e5e5;
   text-align: center;
-  padding: 0;              /* remove default */
+  padding: 0;             
 }
 .site-footer .container {
-  padding: 0.25rem 0;      /* tiny padding */
+  padding: 0rem 0;     
   font-size: 0.9rem;
 }
