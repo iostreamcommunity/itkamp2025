@@ -14,29 +14,33 @@
   </header>
 
   <main class="form-page">
-    <div class="notice">
-      Qeyd: Xüsusi şifrə və sayt girişi yalnız kamp iştirakçılarına təqdim edilir. Ətraflı məlumat üçün zəhmət olmasa <b>Kamp haqqında</b> bölməsinə keçid edin. 
-    </div>
-    <div class="container form-container">
-      <form id="login-form">
-        <label for="username">İstifadəçi adı</label>
-        <input id="username" type="text" placeholder="campuser" required>
+    <div class="container">
+      <div class="notice">
+        Qeyd: Xüsusi şifrə və sayt girişi yalnız kamp iştirakçılarına təqdim edilir.
+      </div>
+      <div class="form-container">
+        <form id="login-form">
+          <label for="username">İstifadəçi adı</label>
+          <input id="username" name="username" type="text" placeholder="campuser" required>
 
-        <label for="password">Şifrə</label>
-        <input id="password" type="password" placeholder="camp1234" required>
+          <label for="password">Şifrə</label>
+          <input id="password" name="password" type="password" placeholder="camp1234" required>
 
-        <div class="form-actions">
-          <button type="submit" class="btn">Giriş et</button>
-          <a href="index.html" class="link">Geri qayıt</a>
-        </div>
-      </form>
+          <div id="login-message"></div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn">Giriş et</button>
+            <a href="index.html" class="link">Geri qayıt</a>
+          </div>
+        </form>
+      </div>
     </div>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      © 2025 IT Yay Kampı
-    </div>
+    <div class="container">© 2025 IT Yay Kampı</div>
   </footer>
+
+  <script src="js/auth.js"></script>
 </body>
 </html>
