@@ -24,12 +24,14 @@ body {
   color: var(--fg);
 }
 
+/* Container */
 .container {
   width: min(90%, 600px);
   margin: 0 auto;
   padding: var(--spacing) 0;
 }
 
+/* Header */
 .site-header {
   border-bottom: 1px solid #e5e5e5;
 }
@@ -56,6 +58,7 @@ body {
   text-decoration: underline;
 }
 
+/* Hero */
 .hero {
   background: var(--bg);
   text-align: center;
@@ -72,6 +75,7 @@ body {
   margin-bottom: 2rem;
 }
 
+/* Buttons */
 .btn {
   display: inline-block;
   padding: 0.75em 1.5em;
@@ -87,6 +91,7 @@ body {
   color: var(--bg);
 }
 
+/* Notice box */
 .notice {
   max-width: 100%;
   margin: 0 auto var(--spacing);
@@ -97,6 +102,7 @@ body {
   font-size: 0.95rem;
 }
 
+/* Form page */
 .form-page {
   padding: var(--spacing) 0;
 }
@@ -120,6 +126,7 @@ body {
   border-radius: var(--radius);
 }
 
+/* Form actions */
 .form-actions {
   margin-top: 1.5rem;
   display: flex;
@@ -127,6 +134,8 @@ body {
   align-items: center;
   gap: 1rem;
 }
+
+/* Links */
 .link {
   font-size: 0.9rem;
   color: var(--fg);
@@ -135,19 +144,17 @@ body {
   text-decoration: underline;
 }
 
+/* Dashboard content */
 .content {
   text-align: center;
   padding: calc(var(--spacing) * 2) 0;
 }
 
 .site-footer {
-  background: var(--bg);
+  background: var(--color-bg);
   text-align: center;
   border-top: 1px solid #dfe4ea;
-  padding: 0.5rem 0;   
+  padding: 0.5rem 0;
   font-size: 0.85rem;
-  margin-top: 0;
-}
-.site-footer .container {
-  padding: 0;
+  margin-top: auto;
 }
