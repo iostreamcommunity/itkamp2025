@@ -156,12 +156,13 @@ body {
   background: var(--bg);
   text-align: center;
   border-top: 1px solid #dfe4ea;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0;      /* small vertical padding */
   font-size: 0.85rem;
+  /* remove any auto-margin hack */
+  margin-top: 0;
 }
 
-/* Remove extra container padding inside footer */
+/* 🔧 FORCE remove the container’s vertical padding in the footer */
 .site-footer .container {
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 0 !important;
 }
