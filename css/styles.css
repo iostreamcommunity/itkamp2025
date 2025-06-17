@@ -151,11 +151,17 @@ body {
   padding: calc(var(--spacing) * 2) 0;
 }
 
+/* Footer */
 .site-footer {
-  background: var(--color-bg);
+  background: var(--bg);
   text-align: center;
   border-top: 1px solid #dfe4ea;
   padding: 0.5rem 0;
   font-size: 0.85rem;
-  margin-top: auto;
+}
+
+/* Remove extra container padding inside footer */
+.site-footer .container {
+  padding-top: 0;
+  padding-bottom: 0;
 }
