@@ -82,6 +82,10 @@ main {
   line-height: 1.5;
   margin-bottom: 2rem;
 }
+.hero-content {
+  margin-top: 2rem;       /* push everything down */
+  text-align: center;     /* ensure centered */
+}
 
 /* Button */
 .btn {
