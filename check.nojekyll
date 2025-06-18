@@ -1,0 +1,5 @@
+cd path/to/dusherge2025
+touch .nojekyll
+git add .nojekyll
+git commit -m "Prevent Jekyll build on GitHub Pages"
+git push
