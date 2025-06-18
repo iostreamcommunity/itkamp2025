@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   form.addEventListener('submit', e => {
     e.preventDefault();
-    const user = form.username.value.trim();
+    const user = form.username.value.trim(); 
     const pass = form.password.value;
 
     if (user === 'campuser' && pass === 'camp1234') {
