@@ -33,14 +33,12 @@ body {
   padding: var(--spacing) 0;
 }
 
-/* Header */
 .site-header {
   background: var(--bg);
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 .site-header .container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   width: 100%;
   max-width: none;        
