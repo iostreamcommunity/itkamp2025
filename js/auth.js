@@ -6,9 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
   form.addEventListener('submit', e => {
     e.preventDefault();
     const user = form.username.value.trim();
-    const pass = form.password.value.trim();
+    const pass = form.password.value;
 
-    // replace these with your real credentials
     if (user === 'campuser' && pass === 'camp1234') {
       window.location.href = 'dashboard.html';
     } else {
