@@ -190,3 +190,10 @@ main {
   padding: 0.5rem 0;
   font-size: 0.9rem;
 }
+
+.site-header .container {
+  width: 100%;
+  max-width: none;        
+  padding: var(--spacing);
+}
+
