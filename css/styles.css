@@ -1,4 +1,3 @@
-/* css/styles.css */
 :root {
   --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --bg: #ffffff;
@@ -34,15 +33,15 @@ body {
   padding: var(--spacing) 0;
 }
 
-/* Header */
 .site-header {
   background: var(--bg);
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 .site-header .container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  width: 100%;
+  max-width: none;        
   padding: var(--spacing);
 }
 .logo {
@@ -63,6 +62,7 @@ body {
   color: #555;
 }
 
+/* Make main grow to push footer down */
 main {
   flex: 1;
 }
@@ -72,39 +72,22 @@ main {
   text-align: center;
   padding: calc(var(--spacing) * 2) 0;
 }
-.hero-content {
-  margin-top: 2rem;
-  text-align: center;
-}
-.hero-content h2 {
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 0.15em solid var(--fg);
+.hero h2 {
   font-size: 2.5rem;
   font-weight: 600;
-  /* Continuous typewriter effect */
-  animation: typewriter 4s steps(30) infinite, blink-caret 0.75s step-end infinite;
+  margin-bottom: 1rem;
 }
 .hero p {
   font-size: 1rem;
   line-height: 1.5;
-  margin: 1.5rem 0 2rem;
+  margin-bottom: 2rem;
+}
+.hero-content {
+  margin-top: 2rem;       /* push everything down */
+  text-align: center;     /* ensure centered */
 }
 
-/* Typewriter keyframes */
-@keyframes typewriter {
-  0% { width: 0; }
-  50% { width: 100%; }
-  100% { width: 0; }
-}
-
-/* Blinking cursor */
-@keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: var(--fg); }
-}
-
-/* Buttons */
+/* Button */
 .btn {
   display: inline-block;
   padding: 0.75em 1.5em;
@@ -121,7 +104,7 @@ main {
   color: var(--bg);
 }
 
-/* Notice */
+/* Notice box */
 .notice {
   background: #FFFBCC;
   border-left: 4px solid #FFD700;
@@ -155,7 +138,7 @@ main {
   border-radius: var(--radius);
 }
 
-/* Form actions */
+/* Form actions (inline buttons) */
 .form-actions {
   display: flex;
   justify-content: flex-end;
@@ -164,7 +147,7 @@ main {
   margin-top: 1.5rem;
 }
 
-/* Simple link */
+/* Simple link style */
 .link {
   font-size: 0.9rem;
   color: var(--fg);
@@ -179,6 +162,7 @@ main {
   text-align: center;
   padding: calc(var(--spacing) * 2) 0;
 }
+/* Three cards grid */
 .dashboard-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
@@ -209,4 +193,40 @@ main {
   text-align: center;
   padding: 0.5rem 0;
   font-size: 0.9rem;
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* 1) Make the typewriter cycle continuously */
+.hero-content h2 {
+  /* 4s total: type (2s), pause (1s), delete (1s) */
+    overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--fg);
+  display: inline-block;
+  animation: typewriter 2s steps(20) 0.5s forwards,
+             fadeIn      0.5s ease-in      2.5s forwards;
+  opacity: 0;
+  animation: 
+    typewriter 4s steps(30) infinite,
+    blink-caret 0.75s step-end infinite;
+}
+
+/* 2) Keyframes that type out, then erase */
+@keyframes typewriter {
+  0%, 50%   { width: 0;      } /* 0–2s: typing */
+  60%,100%  { width: 100%;   } /* 2.4–4s: pause then erase */
+}
+
+/* 3) Blinking cursor */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50%      { border-color: var(--fg); }
 }
