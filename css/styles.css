@@ -86,11 +86,11 @@ main {
 /* Hero */
 .hero {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  min-height: 70vh;
-  padding: 0 var(--spacing);
+  justify-content: center;  /* vertical centering */
+  align-items: center;      /* horizontal centering */
+  text-align: center;       /* center text */
+  min-height: 80vh;         /* fills most of screen */
 }
 .hero h2 {
   font-size: 2.5rem;
