@@ -90,7 +90,7 @@ main {
   justify-content: center;  /* vertical centering */
   align-items: center;      /* horizontal centering */
   text-align: center;       /* center text */
-  min-height: 80vh;         /* fills most of screen */
+  padding: 6rem 1rem;       /* fills most of screen */
 }
 .hero h2 {
   font-size: 2.5rem;
