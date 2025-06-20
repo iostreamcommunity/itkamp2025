@@ -39,17 +39,22 @@ body {
 }
 .site-header .container {
   display: flex;
+  flex-wrap: nowrap;      
+  align-items: center;
   justify-content: space-between;
-  width: 100%;
-  max-width: none;        
   padding: var(--spacing);
+  width: 100%;
+  max-width: none;
 }
+
 .logo {
   font-size: 1.75rem;
   font-weight: 600;
 }
 .site-nav {
   display: flex;
+  flex-wrap: nowrap;       
+  align-items: center;
   gap: var(--spacing);
 }
 .nav-link {
