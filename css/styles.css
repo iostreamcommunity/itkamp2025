@@ -61,6 +61,17 @@ body {
 .nav-link:hover {
   color: #555;
 }
+.nav-cta {
+  margin-left: auto;               
+  padding: 0.5em 1em;             
+  border: 1px solid var(--fg);   
+  border-radius: var(--radius);
+  transition: background 0.2s, color 0.2s;
+}
+.nav-cta:hover {
+  background: var(--fg);
+  color: var(--bg);
+}
 
 /* Make main grow to push footer down */
 main {
