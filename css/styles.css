@@ -232,3 +232,29 @@ main {
   from, to { border-color: transparent; }
   50%      { border-color: var(--fg); }
 }
+/* dashboard “Çıxış” button */
+.link-exit {
+  border: 1px solid #e74c3c;
+  padding: 0.5em 1em;
+  border-radius: var(--radius);
+  color: #e74c3c;
+  transition: background 0.2s, color 0.2s;
+}
+.link-exit:hover {
+  background: #e74c3c;
+  color: #ffffff;
+}
+
+/* “Geri” back button */
+.link-back {
+  border: 1px solid var(--fg);
+  padding: 0.5em 1em;
+  border-radius: var(--radius);
+  color: var(--fg);
+  transition: background 0.2s, color 0.2s;
+}
+.link-back:hover {
+  background: var(--fg);
+  color: var(--bg);
+}
+
