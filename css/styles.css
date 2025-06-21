@@ -78,19 +78,17 @@ body {
   color: var(--bg);
 }
 
-/* Make main grow to push footer down */
 main {
   flex: 1;
 }
 
-/* Hero */
 .hero {
   display: flex;
   flex-direction: column;
-  justify-content: center;  /* vertical centering */
-  align-items: center;      /* horizontal centering */
-  text-align: center;       /* center text */
-  padding: 6rem 1rem;       /* fills most of screen */
+  justify-content: center;  
+  align-items: center;      
+  text-align: center;      
+  padding: 6rem 1rem;     
 }
 .hero h2 {
   font-size: 2.5rem;
@@ -103,13 +101,13 @@ main {
   margin-bottom: 2rem;
 }
 .hero-content {
-  margin-top: 2rem;       /* push everything down */
-  text-align: center;     /* ensure centered */
+  margin-top: 2rem;     
+  text-align: center;    
 }
 .hero-content p {
-  text-align: center;    /* force center alignment */
-  margin: 0 auto 2rem;   /* auto-horizontal margins */
-  max-width: 560px;       /* optional: constrain line length */
+  text-align: center;   
+  margin: 0 auto 2rem;   
+  max-width: 560px;     
 }
 
 .hero .btn {
@@ -121,7 +119,6 @@ main {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Button */
 .btn {
   display: inline-block;
   padding: 0.75em 1.5em;
@@ -138,7 +135,6 @@ main {
   color: var(--bg);
 }
 
-/* Notice box */
 .notice {
   background: #FFFBCC;
   border-left: 4px solid #FFD700;
@@ -147,8 +143,6 @@ main {
   margin-bottom: var(--spacing);
   font-size: 0.95rem;
 }
-
-/* Form page */
 .form-page {
   padding: var(--spacing) 0;
 }
@@ -172,7 +166,6 @@ main {
   border-radius: var(--radius);
 }
 
-/* Form actions (inline buttons) */
 .form-actions {
   display: flex;
   justify-content: flex-end;
@@ -181,7 +174,6 @@ main {
   margin-top: 1.5rem;
 }
 
-/* Simple link style */
 .link {
   font-size: 0.9rem;
   color: var(--fg);
@@ -191,12 +183,10 @@ main {
   text-decoration: underline;
 }
 
-/* Dashboard */
 .content {
   text-align: center;
   padding: calc(var(--spacing) * 2) 0;
 }
-/* Three cards grid */
 .dashboard-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
@@ -221,7 +211,6 @@ main {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* Footer */
 .site-footer {
   background: var(--bg);
   text-align: center;
@@ -237,7 +226,6 @@ main {
   opacity: 0;
   animation: fadeInUp 0.8s ease-out forwards;
 }
-/* cycle: 0–2s type, 2–2.4s pause, 2.4–4s erase */
 @keyframes typewriter {
   0%, 50%   { width: 0; }
   60%,100%  { width: 100%; }
@@ -247,7 +235,6 @@ main {
   from, to { border-color: transparent; }
   50%      { border-color: var(--fg); }
 }
-/* dashboard “Çıxış” button */
 .link-exit {
   border: 1px solid #e74c3c;
   padding: 0.5em 1em;
@@ -260,7 +247,6 @@ main {
   color: #ffffff;
 }
 
-/* “Geri” back button */
 .link-back {
   border: 1px solid var(--fg);
   padding: 0.5em 1em;
