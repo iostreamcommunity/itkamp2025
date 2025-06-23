@@ -23,8 +23,9 @@ const ACCOUNTS = {
   silkin6:    '1358',
   sfiruz5:    '2469',
   stunar8:    '3570',
-  srasul9:    '4681',
+  srasul9:    '4681'
 };
+
 const GROUP = {
   smehemmed8: 'A',
   saygun8:    'A',
@@ -50,22 +51,25 @@ const GROUP = {
   silkin6:    'B',
   sfiruz5:    'B',
   stunar8:    'B',
-  srasul9:    'B',
+  srasul9:    'B'
 };
 
-form.addEventListener('submit', e => {
-  e.preventDefault();
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('login-form');
+  const msg  = document.getElementById('login-message');
 
-  const user  = form.username.value.trim().toLowerCase();
-  const pass  = form.password.value.trim();
-  const msg   = document.getElementById('login-message');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
 
-  if (ACCOUNTS[user] && ACCOUNTS[user] === pass) {
-    const page = GROUP[user] === 'A' ? 'pageA.html' : 'pageB.html';
-    window.location.href = page;
-  } else {
-    msg.textContent = '❌ İstifadəçi adı və ya şifrə yanlışdır.';
-    msg.style.color = '#e74c3c';
-  }
-});
+    const user = form.username.value.trim().toLowerCase();
+    const pass = form.password.value.trim();
+
+    if (ACCOUNTS[user] && ACCOUNTS[user] === pass) {
+      const targetPage = GROUP[user] === 'A' ? 'pageA.html' : 'pageB.html';
+      window.location.href = targetPage;
+    } else {
+      msg.textContent = '❌ İstifadəçi adı və ya şifrə yanlışdır.';
+      msg.style.color = '#e74c3c';
+    }
+  });
 });
