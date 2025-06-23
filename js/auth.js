@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const pass = form.password.value.trim();
 
     if (ACCOUNTS[user] && ACCOUNTS[user] === pass) {
-      const targetPage = GROUP[user] === 'A' ? 'LxDSFJKSAssdaflJSDFK.html' : 'pageB.html';
+      const targetPage = GROUP[user] === 'A' ? 'LxDSFJKSAssdaflJSDFK.html' : 'BCAVAJSsdafakjfaFSDKAFA.html';
       window.location.href = targetPage;
     } else {
       msg.textContent = '❌ İstifadəçi adı və ya şifrə yanlışdır.';
