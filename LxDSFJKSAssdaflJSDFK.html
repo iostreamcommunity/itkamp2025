@@ -31,7 +31,6 @@
   document.addEventListener('DOMContentLoaded', () => {
     const name = sessionStorage.getItem('fullName') || 'istifadəçi';
     document.getElementById('greeting').textContent = `Salam, ${name}!`;
-    // if you want: redirect back to login when no name in storage
     if (!sessionStorage.getItem('fullName')) {
       window.location.href = 'login.html';
     }
