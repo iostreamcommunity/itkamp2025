@@ -204,8 +204,10 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 120px;
   transition: box-shadow 0.2s;
+  flex: 0 0 260px;   
+  max-width: 260px;     
+  height: 140px;     
 }
 .card:hover {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
