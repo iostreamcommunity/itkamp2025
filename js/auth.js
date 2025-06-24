@@ -54,6 +54,34 @@ const GROUP = {
   srasul9:    'B'
 };
 
+const PROFILES = {
+  smehemmed8: 'Məhəməd Salmanov',
+  qmehri8:    'Mehri Qasımzadə',
+  asona8:     'Sona Əsgərova',
+  aalidavud8: 'Alidavud Alışov',
+  aaysu8:     'Aysu Abbasova',
+  sfurqan7:   'Fürqan Süleymanlı',
+  tmelek4:    'Mələk Təhməzli',
+  qbahar7:    'Bahar Qasımzadə',
+  efariz7:    'Fariz Əliyev',
+  ekenan6:    'Kənan Əlili',
+  helvin7:    'Elvin Hüseynov',
+  aelcan6:    'Elcan Ağazadə',
+  mnihad7:    'Nihad Məmmədli',
+  mmahmud6:   'Mahmud Mehrəlizadə',
+  rahmed5:    'Ahmed Ramazan',
+  zonur6:     'Onur Zaman',
+  nselcuq7:   'Səlcuq Nağıyev',
+  ryasin3:    'Yasin Ramazan',
+  hbehlul7:   'Bəhlul Həsrətzadə',
+  mnihad7v2:  'Nihad Məmmədli (Nicat)',
+  mnurhan7:   'Nurhan Məmmədli',
+  milkin6:    'İlkin Məmmədov',
+  efiruz5:    'Firuz Əliyev',
+  btunar8:    'Tunar Babayev',
+  srasul9:    'Rəsul Şükür'
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('login-form');
   const msg  = document.getElementById('login-message');
@@ -65,6 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const pass = form.password.value.trim();
 
     if (ACCOUNTS[user] && ACCOUNTS[user] === pass) {
+      sessionStorage.setItem('fullName', PROFILES[user] || user);
       const targetPage = GROUP[user] === 'A' ? 'LxDSFJKSAssdaflJSDFK.html' : 'BCAVAJSsdafakjfaFSDKAFA.html';
       window.location.href = targetPage;
     } else {
