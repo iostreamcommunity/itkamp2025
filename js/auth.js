@@ -32,7 +32,7 @@ const GROUP = {
   asona8:     'A',
   aalidavud8: 'A',
   aaysu8:     'A',
-  sfurqan7:   'B',
+  sfurqan7:   'A',
   tmelek4:    'B',
   qbahar7:    'A',
   efariz7:    'A',
