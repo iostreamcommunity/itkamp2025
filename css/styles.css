@@ -260,3 +260,13 @@ main {
   background: var(--fg);
   color: var(--bg);
 }
+.home-link {
+  text-decoration: none;
+  color: inherit;      
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25em;
+}
+.home-link:hover {
+  opacity: 0.8;       
+}
