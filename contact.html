@@ -8,12 +8,12 @@
   <style>
     .contact-hero {
       text-align: center;
-      padding: 4rem 1rem;
+      padding: 4rem 1rem 6rem;   
     }
     .profiles {
       display: flex;
       justify-content: center;
-      gap: 4rem;
+      gap: 6rem;            
       flex-wrap: wrap;
       margin-bottom: 2rem;
     }
@@ -21,10 +21,10 @@
       text-align: center;
     }
     .profile img.avatar {
-      width: 160px;
-      height: 160px;
+      width: 200px;         
+      height: 200px;
       border-radius: 50%;
-      border: 4px solid var(--fg);
+      border: 5px solid var(--fg);
       object-fit: cover;
       margin-bottom: 1rem;
     }
@@ -46,6 +46,21 @@
       width: 20px;
       height: 20px;
     }
+    .geri-btn {
+      display: inline-block;
+      margin: 2rem auto 1rem;
+      padding: 0.6em 1.2em;
+      border: 1px solid var(--fg);
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-weight: 500;
+      background: transparent;
+      transition: background 0.2s, color 0.2s;
+    }
+    .geri-btn:hover {
+      background: var(--fg);
+      color: var(--bg);
+    }
     .contact-info {
       text-align: center;
       font-size: 1rem;
@@ -60,6 +75,7 @@
   </style>
 </head>
 <body>
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container">
       <h1 class="logo">IT Yay Kampı 2025</h1>
@@ -70,9 +86,11 @@
       </nav>
     </div>
   </header>
+
   <main class="contact-hero">
     <div class="container">
       <h2>Əlaqə</h2>
+
       <div class="profiles">
         <div class="profile">
           <img src="images/elnur.jpg" alt="Elnur Mirzəli" class="avatar">
@@ -89,9 +107,12 @@
           </a>
         </div>
       </div>
-      <a href="index.html"  class="nav-link nav-cta">Geri</a>
+
+
+      <a href="index.html" class="geri-btn">Geri</a>
+
       <div class="contact-info">
-        <img src="images/gmail.svg" alt="Gmail">
+        <img src="images/gmail.svg" alt="Gmail"> 
         <span>itkamp2025@gmail.com</span>
       </div>
     </div>
@@ -102,4 +123,3 @@
   </footer>
 </body>
 </html>
-
