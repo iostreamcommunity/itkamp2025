@@ -270,3 +270,21 @@ main {
 .home-link:hover {
   opacity: 0.8;       
 }
+.sponsor {
+  text-align: center;
+  margin-top: 2rem;
+}
+.sponsor p {
+  font-size: 0.9rem;
+  color: var(--fg);
+  margin-bottom: 0.5rem;
+}
+.sponsor img {
+  height: 50px;          
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.2s;
+}
+.sponsor img:hover {
+  filter: none;      
+}
