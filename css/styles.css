@@ -280,7 +280,7 @@ main {
   margin-bottom: 0.5rem;
 }
 .sponsor img {
-  height: 50px;          
+  height: 80px;          
   object-fit: contain;
   filter: grayscale(100%);
   transition: filter 0.2s;
