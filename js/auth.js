@@ -37,7 +37,7 @@ const GROUP = {
   ekenan6:    'A',
   helvin7:    'A',
   aelcan6:    'B',
-  mnihad7:    'B',
+  mnihad7:    'A',
   mmahmud6:   'B',
   rahmed5:    'B',
   zonur6:     'B',
