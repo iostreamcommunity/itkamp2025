@@ -5,45 +5,101 @@
   <title>Dashboard A — IT Yay Kampı 2025</title> 
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .lesson-box {
+      border: 1px solid #999;
+      padding: 1rem;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      background-color: #f8f8f8;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.2s ease;
+    }
+
+    .lesson-box:hover {
+      background-color: #eaeaea;
+      cursor: pointer;
+    }
+
+    .lesson-title {
+      font-weight: bold;
+    }
+
+    .lesson-desc {
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    .dashboard-cards {
+      display: none; /* hides original 3 cards */
+    }
+  </style>
 </head>
+
 <body>
- <header class="site-header">
+  <header class="site-header">
     <div class="container">
       <h1 class="logo">
-  <a href="LxDSFJKSAssdaflJSDFK.html" class="home-link">
-    IT Yay Kampı 2025
-  </a>
-</h1>
- <nav class="site-nav">
- <a href="index.html" class="link link-exit">Çıxış</a>
-</nav>
-
+        <a href="LxDSFJKSAssdaflJSDFK.html" class="home-link">IT Yay Kampı 2025</a>
+      </h1>
+      <nav class="site-nav">
+        <a href="index.html" class="link link-exit">Çıxış</a>
+      </nav>
     </div>
   </header>
 
   <main class="content">
     <div class="container">
       <h2 id="greeting">Salam!</h2>
-       <br>
-      <div class="dashboard-cards">
-        <a href="resourcesALxDSFJKSAssdaflJSDFK.html" class="card">Resurslar</a>
-        <a href="tasksALxDSFJKSAssdaflJSDFK.html" class="card">Ev Tapşırıqları</a>
-        <a href="lessonsALxDSFJKSAssdaflJSDFK.html" class="card">Dərslər</a>
-      </div>
+      <br>
+      <div id="lessons"></div>
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="container">© 2025 SPARK Community</div>
   </footer>
+
   <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const name = sessionStorage.getItem('fullName') || 'istifadəçi';
-    document.getElementById('greeting').textContent = `Salam, ${name}!`;
-    if (!sessionStorage.getItem('fullName')) {
-      window.location.href = 'login.html';
-    }
-  });
-</script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const name = sessionStorage.getItem('fullName') || 'istifadəçi';
+      document.getElementById('greeting').textContent = `Salam, ${name}!`;
+      if (!sessionStorage.getItem('fullName')) {
+        window.location.href = 'login.html';
+      }
+
+      const lessons = [
+        { url: 'ders1.html', name: 'Dərs 1: Binary Search', description: " " },
+        { url: 'ders2.html', name: 'Dərs 2: String Kodlaması', description: " " },
+        { url: 'ders3.html', name: 'Dərs 3: Bit əməli və Trie strukturu', description: " " },
+        { url: 'ders4.html', name: 'Dərs 4: Bitmask və Meet-in-the-Middle', description: " " },
+        { url: 'ders5.html', name: 'Dərs 5-6: Segment Tree', description: " " },
+        { url: 'ders6.html', name: 'Dərs 7: Qısa yollar', description: " " },
+        { url: 'ders7.html', name: 'Dərs 8: Ağac DP', description: " " },
+      ];
+
+      const container = document.getElementById('lessons');
+
+      lessons.forEach(lesson => {
+        const a = document.createElement('a');
+        a.href = lesson.url;
+        a.style.textDecoration = 'none';
+        a.style.color = 'inherit';
+
+        a.innerHTML = `
+          <div class="lesson-box">
+            <div>
+              <div class="lesson-title">${lesson.name}</div>
+              <div class="lesson-desc">${lesson.description}</div>
+            </div>
+            <div>➤</div>
+          </div>
+        `;
+        container.appendChild(a);
+      });
+    });
+  </script>
 </body>
 </html>
