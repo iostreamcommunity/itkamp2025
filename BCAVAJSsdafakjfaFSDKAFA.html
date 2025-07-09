@@ -2,50 +2,104 @@
 <html lang="az">
 <head> 
   <meta charset="utf-8"> 
-  <title>Dashboard B — IT Yay Kampı 2025</title>
+  <title>Dashboard B— IT Yay Kampı 2025</title> 
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+  <style>
+    .lesson-box {
+      border: 1px solid #999;
+      padding: 1rem;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      background-color: #f8f8f8;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.2s ease;
+    }
 
-    <header class="site-header">
+    .lesson-box:hover {
+      background-color: #eaeaea;
+      cursor: pointer;
+    }
+
+    .lesson-title {
+      font-weight: bold;
+    }
+
+    .lesson-desc {
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    .dashboard-cards {
+      display: none; /* hides original 3 cards */
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
     <div class="container">
       <h1 class="logo">
-  <a href="BCAVAJSsdafakjfaFSDKAFA.html" class="home-link">
-    IT Yay Kampı 2025
-  </a>
-</h1>
- <nav class="site-nav">
- <a href="index.html" class="link link-exit">Çıxış</a>
-</nav>
-
+        <a href="BCAVAJSsdafakjfaFSDKAFA.html" class="home-link">IT Yay Kampı 2025</a>
+      </h1>
+      <nav class="site-nav">
+        <a href="index.html" class="link link-exit">Çıxış</a>
+      </nav>
     </div>
   </header>
 
   <main class="content">
     <div class="container">
       <h2 id="greeting">Salam!</h2>
-       <br>
-      <div class="dashboard-cards">
-        <a href="resourcesBBCAVAJSsdafakjfaFSDKAFA.html" class="card">Resurslar</a>
-        <a href="tasksBBCAVAJSsdafakjfaFSDKAFA.html" class="card">Ev Tapşırıqları</a>
-        <a href="lessonsBBCAVAJSsdafakjfaFSDKAFA.html" class="card">Dərslər</a>
-      </div>
+      <br>
+      <div id="lessons"></div>
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="container">© 2025 SPARK Community</div>
   </footer>
-  <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const name = sessionStorage.getItem('fullName') || 'istifadəçi';
-    document.getElementById('greeting').textContent = `Salam, ${name}!`;
-    if (!sessionStorage.getItem('fullName')) {
-      window.location.href = 'login.html';
-    }
-  });
-</script>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const name = sessionStorage.getItem('fullName') || 'istifadəçi';
+      document.getElementById('greeting').textContent = `Salam, ${name}!`;
+      if (!sessionStorage.getItem('fullName')) {
+        window.location.href = 'login.html';
+      }
+
+      const lessons = [
+        { url: 'ders1b.html', name: 'Dərs 1 ', description: " " },
+        { url: 'ders2b.html', name: 'Dərs 2 ', description: " " },
+        { url: 'ders3b.html', name: 'Dərs 3 ', description: " " },
+        { url: 'ders4b.html', name: 'Dərs 4 ', description: " " },
+        { url: 'ders5b.html', name: 'Dərs 5 ', description: " " },
+        { url: 'ders6b.html', name: 'Dərs 6 ', description: " " },
+        { url: 'ders7b.html', name: 'Dərs 8 ', description: " " },
+      ];
+
+      const container = document.getElementById('lessons');
+
+      lessons.forEach(lesson => {
+        const a = document.createElement('a');
+        a.href = lesson.url;
+        a.style.textDecoration = 'none';
+        a.style.color = 'inherit';
+
+        a.innerHTML = `
+          <div class="lesson-box">
+            <div>
+              <div class="lesson-title">${lesson.name}</div>
+              <div class="lesson-desc">${lesson.description}</div>
+            </div>
+            <div>➤</div>
+          </div>
+        `;
+        container.appendChild(a);
+      });
+    });
+  </script>
 </body>
 </html>
