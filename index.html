@@ -5,34 +5,93 @@
   <title>IT Yay Kampı 2025</title> 
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Popup styles */
+    .popup-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    .popup {
+      background: #fff;
+      max-width: 480px;
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      font-family: Arial, sans-serif;
+    }
+    .popup h2 {
+      margin-bottom: .75rem;
+      font-size: 1.3rem;
+      color: #333;
+    }
+    .popup p {
+      font-size: .95rem;
+      color: #444;
+      line-height: 1.5;
+    }
+    .popup button {
+      margin-top: 1rem;
+      padding: .6rem 1.2rem;
+      border: none;
+      background: #47A248;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background .2s;
+    }
+    .popup button:hover {
+      background: #3b8b3f;
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
     <div class="container">
       <h1 class="logo">
-  <a href="index.html" class="home-link">
-    IT Yay Kampı 2025
-  </a>
-</h1>
- <nav class="site-nav">
-  <a href="about.html" class="nav-link">Haqqımızda</a>
-  <a href="contact.html" class="nav-link">Əlaqə</a>
-  <a href="login.html" class="nav-link nav-cta">Giriş et</a>
-</nav>
-
+        <a href="index.html" class="home-link">
+          IT Yay Kampı 2025
+        </a>
+      </h1>
+      <nav class="site-nav">
+        <a href="about.html" class="nav-link">Haqqımızda</a>
+        <a href="contact.html" class="nav-link">Əlaqə</a>
+        <a href="login.html" class="nav-link nav-cta">Giriş et</a>
+      </nav>
     </div>
   </header>
 
   <main class="hero">
-  <div class="container hero-content">
-    <h2>Xoş gəldiniz!</h2>
-    <p>"IT Yay Kampı"-nın materiallarına giriş üçün adminlər tərəfindən verilmiş istifadəçi adı və şifrəylə <a href="login.html">giriş edin</a>.</p>
-  </div>
-</main>
+    <div class="container hero-content">
+      <h2>Xoş gəldiniz!</h2>
+      <p>"IT Yay Kampı"-nın materiallarına giriş üçün adminlər tərəfindən verilmiş istifadəçi adı və şifrəylə <a href="login.html">giriş edin</a>.</p>
+    </div>
+  </main>
 
   <footer class="site-footer">
     <div class="container">© 2025 SPARK Community</div>
   </footer>
+
+  <!-- Popup -->
+  <div class="popup-overlay" id="popup">
+    <div class="popup">
+      <h2>Sayt hələ hazırlanma mərhələsindədir</h2>
+      <p>Bəzi adlar və məlumatlar səhv ola bilər. Hazırda yalnız tələbələr adminlər tərəfindən verilmiş istifadəçi adı və şifrə ilə dərs materiallarına daxil ola bilərlər. Diqqətiniz üçün təşəkkür edirik!</p>
+      <button onclick="document.getElementById('popup').style.display='none'">Bağla</button>
+    </div>
+  </div>
+
+  <script>
+    // Popup shows automatically on load
+    window.addEventListener('load', () => {
+      document.getElementById('popup').style.display = 'flex';
+    });
+  </script>
 </body>
 </html>
- 
