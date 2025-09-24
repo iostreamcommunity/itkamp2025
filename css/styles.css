@@ -213,12 +213,15 @@ main {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.site-footer {
-  background: var(--bg);
-  text-align: center;
-  padding: 0.5rem 0;
-  font-size: 0.9rem;
-}
+ footer{
+      margin-top:auto;         
+      padding:1.5rem 1rem 2rem;
+      text-align:center; color:#6a7380; font-size:.92rem;
+      border-top:1px solid var(--ring);
+      background:linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(20,20,20,.015) 100%);
+    }
+    a.inline{color:var(--accent); text-decoration:none}
+    a.inline:hover{text-decoration:underline}
 
 .hero-content h2 {
   font-size: clamp(2.5rem, 6vw, 4rem);
