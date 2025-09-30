@@ -46,6 +46,27 @@
       color: var(--fg); text-decoration:none; font-weight:500;
     }
     .contact-links a:hover { text-decoration:underline; }
+    /* uniform, adjustable circular frame */
+.avatar-wrap{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid var(--fg);
+  margin: 0 auto 1rem;
+}
+
+/* per-photo fine-tuning via CSS vars */
+.avatar{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: translate(var(--x,0), var(--y,0)) scale(var(--s,1));
+}
+
+.profile img.avatar{ border:none; margin-bottom:0; }
+
   </style>
 </head>
 <body>
@@ -66,32 +87,35 @@
     <div class="container">
       <h1>Əlaqə</h1>
       <br><br>
-      <div class="profiles">
-        <div class="profile">
-          <img src="images/elnur.jpg" alt="Elnur Mirzəli" class="avatar">
-          <h3>Elnur Mirzəli</h3>
-          <a href="https://www.linkedin.com/in/elnurmirzali" target="_blank" class="linkedin">
-            <img src="images/linkedin.svg" alt="LinkedIn"> elnurmirzali
-          </a>
-        </div>
-        <div class="profile">
-          <img src="images/aykhan.jpeg" alt="Ayxan Kazımlı" class="avatar">
-          <h3>Ayxan Kazımlı</h3>
-          <a href="https://www.linkedin.com/in/aykhankazimli" target="_blank" class="linkedin">
-            <img src="images/linkedin.svg" alt="LinkedIn"> aykhankazimli
-          </a>
-        </div>
-      </div>
+     <div class="profiles">
+  <div class="profile">
+    <div class="avatar-wrap">
+      <img src="images/elnur.jpg" alt="Elnur Mirzəli" class="avatar"
+           style="--s:1.08; --x:0; --y:-4px;">
+    </div>
+    <h3>Elnur Mirzəli</h3>
+    <a href="https://www.linkedin.com/in/elnurmirzali" target="_blank" class="linkedin">
+      <img src="images/linkedin.svg" alt="LinkedIn"> elnurmirzali
+    </a>
+  </div>
+
+  <div class="profile">
+    <div class="avatar-wrap">
+      <img src="images/aykhan.jpeg" alt="Ayxan Kazımlı" class="avatar"
+           style="--s:1.30; --x:0; --y:-6px;">
+    </div>
+    <h3>Ayxan Kazımlı</h3>
+    <a href="https://www.linkedin.com/in/aykhankazimli" target="_blank" class="linkedin">
+      <img src="images/linkedin.svg" alt="LinkedIn"> aykhankazimli
+    </a>
+  </div>
+</div>
+
 
     <div class="contact-links">
   <a href="mailto:itkamp2025@gmail.com">📧 itkamp2025@gmail.com</a>
   <a href="https://www.instagram.com/iostreamcommunity/" target="_blank" rel="noopener">📷 @iostreamcommunity</a>
 </div>
-
-
-      <div class="container hero-content" style="margin-top:2rem">
-        <a href="index.html" class="nav-link nav-cta">Geri</a>
-      </div>
     </div>
   </main>
 
